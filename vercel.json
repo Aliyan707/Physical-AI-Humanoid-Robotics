@@ -5,8 +5,24 @@
   "framework": "docusaurus",
   "rewrites": [
     {
-      "source": "/(.*)",
-      "destination": "/"
+      "source": "/api/(.*)",
+      "destination": "/api/index"
     }
-  ]
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/index.py"
+    }
+  ],
+  "functions": {
+    "api/index.py": {
+      "runtime": "python3.9"
+    }
+  },
+  "env": {
+    "GEMINI_API_KEY": "@gemini_api_key",
+    "QDRANT_URL": "@qdrant_url",
+    "QDRANT_API_KEY": "@qdrant_api_key"
+  }
 }
