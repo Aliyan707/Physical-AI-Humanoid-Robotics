@@ -32,3 +32,6 @@ __pycache__/
 venv/
 env/
 *.egg-info/
+
+.vercel
+.env*.local
