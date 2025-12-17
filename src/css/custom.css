@@ -1,62 +1,77 @@
 /**
- * Physical AI & Humanoid Robotics - Professional Academic Theme
- * Inspired by MIT Press, O'Reilly, and Springer technical books
+ * Physical AI & Humanoid Robotics - Modern Dark Cyber Theme
+ * Cyber Blue to Purple Gradient with Glassmorphism
  */
 
-/* Professional Color Palette - Deep Blue & Tech Red */
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+/* Cyber Theme Color Palette - Dark Mode First */
 :root {
-  /* Primary: Professional Deep Blue (MIT/Academic style) */
-  --ifm-color-primary: #1e3a8a;
-  --ifm-color-primary-dark: #1a3278;
-  --ifm-color-primary-darker: #172e6e;
-  --ifm-color-primary-darkest: #12265a;
-  --ifm-color-primary-light: #22439c;
-  --ifm-color-primary-lighter: #2548a6;
-  --ifm-color-primary-lightest: #2d54ba;
+  /* Cyber Blue to Purple Gradient Colors */
+  --ifm-color-primary: #00D4FF;
+  --ifm-color-primary-dark: #00A8CC;
+  --ifm-color-primary-darker: #007D99;
+  --ifm-color-primary-darkest: #005366;
+  --ifm-color-primary-light: #33DEFF;
+  --ifm-color-primary-lighter: #66E7FF;
+  --ifm-color-primary-lightest: #99F0FF;
 
-  /* Accent: Tech Red for highlights */
-  --ifm-color-accent: #dc2626;
-  --ifm-color-accent-light: #ef4444;
+  /* Purple Accent */
+  --ifm-color-secondary: #9D4EDD;
+  --ifm-color-secondary-dark: #7D3EB1;
+  --ifm-color-secondary-darker: #5E2F85;
+  --ifm-color-secondary-light: #C77DFF;
 
-  /* Typography - Professional Book Style */
-  --ifm-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --ifm-font-family-monospace: 'JetBrains Mono', 'Fira Code', Consolas, Monaco, monospace;
+  /* Cyber Accent Colors */
+  --cyber-blue: #00D4FF;
+  --cyber-purple: #9D4EDD;
+  --cyber-pink: #C77DFF;
+
+  /* Deep Charcoal Backgrounds */
+  --deep-charcoal: #0a0a0f;
+  --dark-slate: #10101a;
+  --midnight-blue: #1a1a2e;
+
+  /* Typography - Modern Tech */
+  --ifm-font-family-base: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --ifm-font-family-monospace: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
   --ifm-heading-font-weight: 700;
   --ifm-font-size-base: 17px;
   --ifm-line-height-base: 1.7;
 
-  /* Code blocks - Technical book style */
+  /* Code blocks */
   --ifm-code-font-size: 92%;
-  --ifm-code-background: #f8fafc;
-  --ifm-code-border-radius: 6px;
-  --docusaurus-highlighted-code-line-bg: rgba(30, 58, 138, 0.1);
+  --ifm-code-background: rgba(255, 255, 255, 0.05);
+  --ifm-code-border-radius: 8px;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 212, 255, 0.1);
 
-  /* Spacing - Academic readability */
+  /* Spacing */
   --ifm-spacing-horizontal: 1.5rem;
   --ifm-global-spacing: 1.5rem;
 
-  /* Navbar - Professional header */
+  /* Navbar - Glassmorphism */
   --ifm-navbar-height: 70px;
-  --ifm-navbar-background-color: #ffffff;
-  --ifm-navbar-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --ifm-navbar-background-color: rgba(10, 10, 15, 0.7);
+  --ifm-navbar-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
 
-/* Dark Mode - High-contrast professional palette */
+/* Dark Mode - Default Theme */
 [data-theme='dark'] {
-  --ifm-color-primary: #3b82f6;
-  --ifm-color-primary-dark: #2563eb;
-  --ifm-color-primary-darker: #1d4ed8;
-  --ifm-color-primary-darkest: #1e40af;
-  --ifm-color-primary-light: #60a5fa;
-  --ifm-color-primary-lighter: #93c5fd;
-  --ifm-color-primary-lightest: #bfdbfe;
+  --ifm-color-primary: #00D4FF;
+  --ifm-color-primary-dark: #00A8CC;
+  --ifm-color-primary-darker: #007D99;
+  --ifm-color-primary-darkest: #005366;
+  --ifm-color-primary-light: #33DEFF;
+  --ifm-color-primary-lighter: #66E7FF;
+  --ifm-color-primary-lightest: #99F0FF;
 
-  --ifm-color-accent: #f87171;
-  --ifm-background-color: #0f172a;
-  --ifm-background-surface-color: #1e293b;
-  --ifm-code-background: #1e293b;
-  --docusaurus-highlighted-code-line-bg: rgba(59, 130, 246, 0.15);
-  --ifm-navbar-background-color: #1e293b;
+  --ifm-background-color: #0a0a0f;
+  --ifm-background-surface-color: #10101a;
+  --ifm-code-background: rgba(255, 255, 255, 0.05);
+  --docusaurus-highlighted-code-line-bg: rgba(0, 212, 255, 0.1);
+  --ifm-navbar-background-color: rgba(10, 10, 15, 0.7);
+  --ifm-footer-background-color: #0a0a0f;
 }
 
 /* Professional Typography */
@@ -132,22 +147,59 @@ table td {
   border-bottom: 1px solid var(--ifm-color-emphasis-200);
 }
 
-/* Navbar - Professional Academic Style */
-.navbar {
-  border-bottom: 1px solid var(--ifm-color-emphasis-200);
-  backdrop-filter: blur(10px);
+/* ============================================
+   Glassmorphism Effects
+   ============================================ */
+
+.glass-nav, .navbar {
+  background: rgba(10, 10, 15, 0.7) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .navbar__title {
   font-weight: 700;
   font-size: 1.25rem;
   letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #00D4FF 0%, #9D4EDD 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .navbar__brand {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+}
+
+/* ============================================
+   Gradient Text
+   ============================================ */
+
+.gradient-text {
+  background: linear-gradient(135deg, #00D4FF 0%, #9D4EDD 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ============================================
+   Glow Effects
+   ============================================ */
+
+.glow-box {
+  box-shadow:
+    0 0 20px rgba(0, 212, 255, 0.15),
+    0 0 40px rgba(157, 78, 221, 0.1);
+}
+
+.glow-box:hover {
+  box-shadow:
+    0 0 30px rgba(0, 212, 255, 0.3),
+    0 0 60px rgba(157, 78, 221, 0.2);
 }
 
 /* Sidebar - Book navigation style */
@@ -180,15 +232,16 @@ table td {
   color: var(--ifm-color-primary);
 }
 
-/* Footer - Professional styling */
+/* Footer - Cyber Dark styling */
 .footer {
-  background: linear-gradient(135deg, var(--ifm-color-primary-darkest) 0%, var(--ifm-color-primary-dark) 100%);
+  background: linear-gradient(135deg, #0a0a0f 0%, #10101a 100%);
+  border-top: 1px solid rgba(0, 212, 255, 0.2);
   color: white;
   padding: 3rem 0;
 }
 
 .footer__title {
-  color: white;
+  color: var(--cyber-blue);
   font-weight: 700;
   text-transform: uppercase;
   font-size: 0.875rem;
@@ -196,13 +249,40 @@ table td {
 }
 
 .footer__link-item {
-  color: rgba(255, 255, 255, 0.8);
-  transition: color 0.2s ease;
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.2s ease;
 }
 
 .footer__link-item:hover {
-  color: white;
-  text-decoration: underline;
+  color: var(--cyber-blue);
+  text-decoration: none;
+  transform: translateX(4px);
+}
+
+/* ============================================
+   Buttons - Cyber Gradient Style
+   ============================================ */
+
+.button--primary {
+  background: linear-gradient(135deg, #00D4FF 0%, #9D4EDD 100%);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.button--primary:hover {
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+  transform: scale(1.05);
+}
+
+.button--outline {
+  border: 2px solid rgba(0, 212, 255, 0.5);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+.button--outline:hover {
+  border-color: var(--cyber-blue);
+  background: rgba(0, 212, 255, 0.1);
 }
 
 /* Badges and labels */
@@ -276,6 +356,67 @@ table td {
   background: white;
 }
 
+/* ============================================
+   Custom Scrollbar
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #00D4FF, #9D4EDD);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #00D4FF, #C77DFF);
+}
+
+/* ============================================
+   Text Selection
+   ============================================ */
+
+::selection {
+  background: rgba(0, 212, 255, 0.3);
+  color: white;
+}
+
+::-moz-selection {
+  background: rgba(0, 212, 255, 0.3);
+  color: white;
+}
+
+/* ============================================
+   Animations
+   ============================================ */
+
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.floating {
+  animation: floating 6s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(157, 78, 221, 0.6);
+  }
+}
+
 /* Responsive improvements */
 @media (max-width: 996px) {
   h1 {
@@ -298,4 +439,36 @@ table td {
   article {
     max-width: 100% !important;
   }
+}
+
+/* Chatbot Animations */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
+}
+
+/* Custom Scrollbar for Chatbot Messages */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #00D4FF 0%, #9D4EDD 100%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #00A8CC 0%, #7D3EB1 100%);
 }

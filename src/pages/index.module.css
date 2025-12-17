@@ -1,6 +1,6 @@
-/* Hero Section */
+/* Hero Section - Cyber Theme */
 .heroBanner {
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+  background: linear-gradient(135deg, #0a0a0f 0%, #10101a 50%, #0a0a0f 100%);
   padding: 6rem 0 4rem;
   position: relative;
   overflow: hidden;
@@ -17,8 +17,8 @@
   right: 0;
   bottom: 0;
   background:
-    radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.15) 0%, transparent 50%);
+    radial-gradient(circle at 20% 30%, rgba(0, 212, 255, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(157, 78, 221, 0.15) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -37,9 +37,9 @@
 
 .badge {
   display: inline-block;
-  background: rgba(96, 165, 250, 0.1);
-  border: 1px solid rgba(96, 165, 250, 0.3);
-  color: #60a5fa;
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.2), rgba(157, 78, 221, 0.2));
+  border: 1px solid rgba(0, 212, 255, 0.5);
+  color: #00D4FF;
   padding: 0.5rem 1.25rem;
   border-radius: 2rem;
   font-size: 0.875rem;
@@ -53,7 +53,7 @@
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 1.5rem;
-  background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #22d3ee 100%);
+  background: linear-gradient(135deg, #00D4FF 0%, #9D4EDD 50%, #C77DFF 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -88,31 +88,31 @@
 }
 
 .buttons .button {
-  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  background: linear-gradient(135deg, #00D4FF 0%, #9D4EDD 100%);
   border: none;
   color: white;
   font-weight: 600;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
 }
 
 .buttons .button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.5);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 30px rgba(0, 212, 255, 0.5);
 }
 
 .buttons .button--outline {
-  background: transparent;
-  border: 2px solid rgba(96, 165, 250, 0.5);
-  color: #60a5fa;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(0, 212, 255, 0.5);
+  color: #00D4FF;
   backdrop-filter: blur(10px);
   box-shadow: none;
 }
 
 .buttons .button--outline:hover {
-  background: rgba(96, 165, 250, 0.1);
-  border-color: #60a5fa;
-  box-shadow: 0 4px 15px rgba(96, 165, 250, 0.2);
+  background: rgba(0, 212, 255, 0.1);
+  border-color: #00D4FF;
+  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
 }
 
 /* Hero Image */
@@ -149,7 +149,7 @@
 
 /* Main Content */
 .mainContent {
-  background: linear-gradient(180deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+  background: linear-gradient(180deg, #0a0a0f 0%, #10101a 50%, #0a0a0f 100%);
 }
 
 /* Features Section */
@@ -162,7 +162,7 @@
   font-size: 2.75rem;
   font-weight: 800;
   margin-bottom: 3rem;
-  background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+  background: linear-gradient(135deg, #00D4FF 0%, #9D4EDD 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -175,8 +175,8 @@
 }
 
 .featureCard {
-  background: rgba(30, 41, 59, 0.5);
-  border: 1px solid rgba(96, 165, 250, 0.2);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(0, 212, 255, 0.2);
   border-radius: 1rem;
   padding: 2rem;
   transition: all 0.3s ease;
@@ -184,16 +184,16 @@
 }
 
 .featureCard:hover {
-  transform: translateY(-8px);
-  border-color: rgba(96, 165, 250, 0.5);
-  box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
-  background: rgba(30, 41, 59, 0.7);
+  transform: translateY(-8px) scale(1.02);
+  border-color: rgba(0, 212, 255, 0.5);
+  box-shadow: 0 20px 40px rgba(0, 212, 255, 0.3);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .featureIcon {
   font-size: 3rem;
   margin-bottom: 1rem;
-  filter: drop-shadow(0 4px 8px rgba(59, 130, 246, 0.4));
+  filter: drop-shadow(0 4px 8px rgba(0, 212, 255, 0.6));
 }
 
 .featureCard h3 {
@@ -201,6 +201,14 @@
   font-size: 1.5rem;
   margin-bottom: 1rem;
   font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.featureCard:hover h3 {
+  background: linear-gradient(135deg, #00D4FF 0%, #9D4EDD 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .featureCard p {
@@ -222,9 +230,9 @@
 }
 
 .techLayer {
-  background: linear-gradient(90deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
-  border: 1px solid rgba(96, 165, 250, 0.2);
-  border-left: 4px solid #3b82f6;
+  background: linear-gradient(90deg, rgba(0, 212, 255, 0.1) 0%, rgba(157, 78, 221, 0.1) 100%);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-left: 4px solid #00D4FF;
   border-radius: 0.75rem;
   padding: 1.5rem 2rem;
   display: flex;
@@ -236,18 +244,18 @@
 .techLayer:hover {
   border-left-width: 8px;
   transform: translateX(8px);
-  background: linear-gradient(90deg, rgba(59, 130, 246, 0.15) 0%, rgba(139, 92, 246, 0.15) 100%);
+  background: linear-gradient(90deg, rgba(0, 212, 255, 0.15) 0%, rgba(157, 78, 221, 0.15) 100%);
 }
 
 .techBadge {
-  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  background: linear-gradient(135deg, #00D4FF 0%, #9D4EDD 100%);
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   font-size: 0.875rem;
   font-weight: 700;
   white-space: nowrap;
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 212, 255, 0.4);
 }
 
 .techLayer h4 {
@@ -263,9 +271,9 @@
 }
 
 .bonusBox {
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(157, 78, 221, 0.1) 100%);
   border: 2px solid;
-  border-image: linear-gradient(135deg, #3b82f6, #8b5cf6, #22d3ee) 1;
+  border-image: linear-gradient(135deg, #00D4FF, #9D4EDD, #C77DFF) 1;
   border-radius: 1.5rem;
   padding: 3rem;
   position: relative;
@@ -279,7 +287,7 @@
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.15) 0%, transparent 70%);
   animation: pulse 4s ease-in-out infinite;
 }
 
@@ -292,7 +300,10 @@
   text-align: center;
   font-size: 2.25rem;
   font-weight: 800;
-  color: #60a5fa;
+  background: linear-gradient(135deg, #00D4FF 0%, #9D4EDD 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-bottom: 2.5rem;
   position: relative;
   z-index: 1;
@@ -307,17 +318,19 @@
 }
 
 .bonusCard {
-  background: rgba(15, 23, 42, 0.6);
-  border: 1px solid rgba(96, 165, 250, 0.2);
+  background: rgba(10, 10, 15, 0.6);
+  border: 1px solid rgba(0, 212, 255, 0.2);
   border-radius: 0.75rem;
   padding: 1.5rem;
   transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
 }
 
 .bonusCard:hover {
   transform: scale(1.05);
-  border-color: #60a5fa;
-  box-shadow: 0 12px 24px rgba(59, 130, 246, 0.3);
+  border-color: #00D4FF;
+  box-shadow: 0 12px 24px rgba(0, 212, 255, 0.4);
+  background: rgba(0, 212, 255, 0.05);
 }
 
 .bonusCard h4 {
@@ -343,7 +356,7 @@
   font-size: 3rem;
   font-weight: 800;
   margin-bottom: 1.5rem;
-  background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+  background: linear-gradient(135deg, #00D4FF 0%, #9D4EDD 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

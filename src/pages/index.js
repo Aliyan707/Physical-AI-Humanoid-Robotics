@@ -43,11 +43,22 @@ function HomepageHeader() {
               <svg viewBox="0 0 400 400" className={styles.heroImage}>
                 <defs>
                   <linearGradient id="robotGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" style={{stopColor: '#3b82f6', stopOpacity: 1}} />
-                    <stop offset="100%" style={{stopColor: '#8b5cf6', stopOpacity: 1}} />
+                    <stop offset="0%" style={{stopColor: '#00D4FF', stopOpacity: 1}} />
+                    <stop offset="100%" style={{stopColor: '#9D4EDD', stopOpacity: 1}} />
+                  </linearGradient>
+                  <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style={{stopColor: '#00D4FF', stopOpacity: 0.8}} />
+                    <stop offset="100%" style={{stopColor: '#C77DFF', stopOpacity: 0.8}} />
                   </linearGradient>
                   <filter id="glow">
-                    <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                    <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+                    <feMerge>
+                      <feMergeNode in="coloredBlur"/>
+                      <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                  </filter>
+                  <filter id="strongGlow">
+                    <feGaussianBlur stdDeviation="10" result="coloredBlur"/>
                     <feMerge>
                       <feMergeNode in="coloredBlur"/>
                       <feMergeNode in="SourceGraphic"/>
@@ -55,34 +66,100 @@ function HomepageHeader() {
                   </filter>
                 </defs>
 
-                {/* Robot Body */}
-                <g filter="url(#glow)">
-                  <rect x="150" y="80" width="100" height="120" rx="15" fill="url(#robotGrad)" opacity="0.9"/>
-                  <circle cx="175" cy="120" r="8" fill="#22d3ee"/>
-                  <circle cx="225" cy="120" r="8" fill="#22d3ee"/>
+                {/* Background circles */}
+                <circle cx="200" cy="200" r="180" fill="none" stroke="url(#robotGrad)" strokeWidth="1" opacity="0.2"/>
+                <circle cx="200" cy="200" r="150" fill="none" stroke="url(#robotGrad)" strokeWidth="1" opacity="0.3"/>
 
-                  {/* Head */}
-                  <rect x="165" y="40" width="70" height="60" rx="10" fill="url(#robotGrad)" opacity="0.95"/>
-                  <circle cx="185" cy="60" r="6" fill="#60a5fa"/>
-                  <circle cx="215" cy="60" r="6" fill="#60a5fa"/>
+                {/* Humanoid Robot */}
+                <g id="humanoid-robot">
+                  {/* Head with visor */}
+                  <rect x="170" y="50" width="60" height="70" rx="12" fill="url(#robotGrad)" filter="url(#glow)" opacity="0.9"/>
+
+                  {/* Visor/Eyes */}
+                  <rect x="175" y="70" width="50" height="20" rx="10" fill="#00D4FF" filter="url(#strongGlow)" opacity="0.9"/>
+                  <circle cx="190" cy="80" r="4" fill="#ffffff" opacity="0.9"/>
+                  <circle cx="210" cy="80" r="4" fill="#ffffff" opacity="0.9"/>
+
+                  {/* Antenna */}
+                  <line x1="200" y1="50" x2="200" y2="30" stroke="url(#robotGrad)" strokeWidth="3" strokeLinecap="round"/>
+                  <circle cx="200" cy="25" r="5" fill="#00D4FF" filter="url(#glow)"/>
+
+                  {/* Neck */}
+                  <rect x="190" y="120" width="20" height="15" rx="3" fill="url(#robotGrad)" opacity="0.8"/>
+
+                  {/* Torso/Chest */}
+                  <rect x="160" y="135" width="80" height="100" rx="15" fill="url(#robotGrad)" filter="url(#glow)" opacity="0.85"/>
+
+                  {/* Chest core (arc reactor style) */}
+                  <circle cx="200" cy="175" r="18" fill="none" stroke="#00D4FF" strokeWidth="3" filter="url(#strongGlow)"/>
+                  <circle cx="200" cy="175" r="12" fill="#00D4FF" opacity="0.3"/>
+                  <circle cx="200" cy="175" r="6" fill="#00D4FF" filter="url(#glow)"/>
+
+                  {/* Shoulders */}
+                  <circle cx="155" cy="145" r="15" fill="url(#robotGrad)" opacity="0.9"/>
+                  <circle cx="245" cy="145" r="15" fill="url(#robotGrad)" opacity="0.9"/>
 
                   {/* Arms */}
-                  <rect x="100" y="100" width="40" height="80" rx="12" fill="url(#robotGrad)" opacity="0.8"/>
-                  <rect x="260" y="100" width="40" height="80" rx="12" fill="url(#robotGrad)" opacity="0.8"/>
+                  <rect x="120" y="145" width="30" height="90" rx="15" fill="url(#robotGrad)" filter="url(#glow)" opacity="0.8"/>
+                  <rect x="250" y="145" width="30" height="90" rx="15" fill="url(#robotGrad)" filter="url(#glow)" opacity="0.8"/>
 
-                  {/* Legs */}
-                  <rect x="160" y="210" width="35" height="100" rx="10" fill="url(#robotGrad)" opacity="0.85"/>
-                  <rect x="205" y="210" width="35" height="100" rx="10" fill="url(#robotGrad)" opacity="0.85"/>
+                  {/* Elbow joints */}
+                  <circle cx="135" cy="190" r="8" fill="#9D4EDD" filter="url(#glow)"/>
+                  <circle cx="265" cy="190" r="8" fill="#9D4EDD" filter="url(#glow)"/>
+
+                  {/* Forearms */}
+                  <rect x="118" y="195" width="34" height="70" rx="17" fill="url(#robotGrad)" opacity="0.85"/>
+                  <rect x="248" y="195" width="34" height="70" rx="17" fill="url(#robotGrad)" opacity="0.85"/>
+
+                  {/* Hands */}
+                  <ellipse cx="135" cy="280" rx="18" ry="22" fill="url(#robotGrad)" filter="url(#glow)" opacity="0.9"/>
+                  <ellipse cx="265" cy="280" rx="18" ry="22" fill="url(#robotGrad)" filter="url(#glow)" opacity="0.9"/>
+
+                  {/* Pelvis/Hip */}
+                  <rect x="175" y="235" width="50" height="30" rx="8" fill="url(#robotGrad)" opacity="0.85"/>
+
+                  {/* Thighs */}
+                  <rect x="170" y="265" width="28" height="70" rx="14" fill="url(#robotGrad)" filter="url(#glow)" opacity="0.85"/>
+                  <rect x="202" y="265" width="28" height="70" rx="14" fill="url(#robotGrad)" filter="url(#glow)" opacity="0.85"/>
+
+                  {/* Knee joints */}
+                  <circle cx="184" cy="315" r="8" fill="#C77DFF" filter="url(#glow)"/>
+                  <circle cx="216" cy="315" r="8" fill="#C77DFF" filter="url(#glow)"/>
+
+                  {/* Lower legs */}
+                  <rect x="168" y="320" width="32" height="60" rx="16" fill="url(#robotGrad)" opacity="0.9"/>
+                  <rect x="200" y="320" width="32" height="60" rx="16" fill="url(#robotGrad)" opacity="0.9"/>
+
+                  {/* Feet */}
+                  <ellipse cx="184" cy="385" rx="20" ry="12" fill="url(#robotGrad)" filter="url(#glow)"/>
+                  <ellipse cx="216" cy="385" rx="20" ry="12" fill="url(#robotGrad)" filter="url(#glow)"/>
                 </g>
 
-                {/* Circuit elements */}
-                <g opacity="0.6" stroke="#60a5fa" strokeWidth="2" fill="none">
-                  <circle cx="80" cy="80" r="20"/>
-                  <circle cx="320" cy="280" r="25"/>
-                  <path d="M 50 200 L 80 200 L 80 240"/>
-                  <path d="M 320 150 L 350 150 L 350 200"/>
-                  <circle cx="50" cy="200" r="5" fill="#22d3ee"/>
-                  <circle cx="320" cy="150" r="5" fill="#a78bfa"/>
+                {/* Circuit/Neural network background */}
+                <g opacity="0.4">
+                  {/* Left side circuits */}
+                  <line x1="60" y1="100" x2="110" y2="150" stroke="#00D4FF" strokeWidth="2"/>
+                  <circle cx="60" cy="100" r="6" fill="#00D4FF" filter="url(#glow)"/>
+                  <line x1="80" y1="250" x2="110" y2="280" stroke="#9D4EDD" strokeWidth="2"/>
+                  <circle cx="80" cy="250" r="6" fill="#9D4EDD" filter="url(#glow)"/>
+
+                  {/* Right side circuits */}
+                  <line x1="340" y1="100" x2="290" y2="150" stroke="#00D4FF" strokeWidth="2"/>
+                  <circle cx="340" cy="100" r="6" fill="#00D4FF" filter="url(#glow)"/>
+                  <line x1="320" y1="250" x2="290" y2="280" stroke="#9D4EDD" strokeWidth="2"/>
+                  <circle cx="320" cy="250" r="6" fill="#9D4EDD" filter="url(#glow)"/>
+
+                  {/* Hexagons */}
+                  <polygon points="200,20 220,30 220,50 200,60 180,50 180,30" fill="none" stroke="#00D4FF" strokeWidth="1.5"/>
+                  <polygon points="80,350 100,360 100,380 80,390 60,380 60,360" fill="none" stroke="#9D4EDD" strokeWidth="1.5"/>
+                  <polygon points="320,350 340,360 340,380 320,390 300,380 300,360" fill="none" stroke="#C77DFF" strokeWidth="1.5"/>
+                </g>
+
+                {/* Data streams */}
+                <g opacity="0.3">
+                  <circle cx="50" cy="180" r="3" fill="#00D4FF"/>
+                  <circle cx="350" cy="180" r="3" fill="#9D4EDD"/>
+                  <circle cx="200" cy="400" r="3" fill="#C77DFF"/>
                 </g>
               </svg>
             </div>
