@@ -1,0 +1,474 @@
+/**
+ * Physical AI & Humanoid Robotics - Modern Dark Cyber Theme
+ * Cyber Blue to Purple Gradient with Glassmorphism
+ */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+/* Cyber Theme Color Palette - Dark Mode First */
+:root {
+  /* Cyber Blue to Purple Gradient Colors */
+  --ifm-color-primary: #00D4FF;
+  --ifm-color-primary-dark: #00A8CC;
+  --ifm-color-primary-darker: #007D99;
+  --ifm-color-primary-darkest: #005366;
+  --ifm-color-primary-light: #33DEFF;
+  --ifm-color-primary-lighter: #66E7FF;
+  --ifm-color-primary-lightest: #99F0FF;
+
+  /* Purple Accent */
+  --ifm-color-secondary: #9D4EDD;
+  --ifm-color-secondary-dark: #7D3EB1;
+  --ifm-color-secondary-darker: #5E2F85;
+  --ifm-color-secondary-light: #C77DFF;
+
+  /* Cyber Accent Colors */
+  --cyber-blue: #00D4FF;
+  --cyber-purple: #9D4EDD;
+  --cyber-pink: #C77DFF;
+
+  /* Deep Charcoal Backgrounds */
+  --deep-charcoal: #0a0a0f;
+  --dark-slate: #10101a;
+  --midnight-blue: #1a1a2e;
+
+  /* Typography - Modern Tech */
+  --ifm-font-family-base: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --ifm-font-family-monospace: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+  --ifm-heading-font-weight: 700;
+  --ifm-font-size-base: 17px;
+  --ifm-line-height-base: 1.7;
+
+  /* Code blocks */
+  --ifm-code-font-size: 92%;
+  --ifm-code-background: rgba(255, 255, 255, 0.05);
+  --ifm-code-border-radius: 8px;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 212, 255, 0.1);
+
+  /* Spacing */
+  --ifm-spacing-horizontal: 1.5rem;
+  --ifm-global-spacing: 1.5rem;
+
+  /* Navbar - Glassmorphism */
+  --ifm-navbar-height: 70px;
+  --ifm-navbar-background-color: rgba(10, 10, 15, 0.7);
+  --ifm-navbar-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* Dark Mode - Default Theme */
+[data-theme='dark'] {
+  --ifm-color-primary: #00D4FF;
+  --ifm-color-primary-dark: #00A8CC;
+  --ifm-color-primary-darker: #007D99;
+  --ifm-color-primary-darkest: #005366;
+  --ifm-color-primary-light: #33DEFF;
+  --ifm-color-primary-lighter: #66E7FF;
+  --ifm-color-primary-lightest: #99F0FF;
+
+  --ifm-background-color: #0a0a0f;
+  --ifm-background-surface-color: #10101a;
+  --ifm-code-background: rgba(255, 255, 255, 0.05);
+  --docusaurus-highlighted-code-line-bg: rgba(0, 212, 255, 0.1);
+  --ifm-navbar-background-color: rgba(10, 10, 15, 0.7);
+  --ifm-footer-background-color: #0a0a0f;
+}
+
+/* Professional Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--ifm-color-primary);
+}
+
+h2 {
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--ifm-color-primary-lightest);
+}
+
+/* Book-style paragraphs */
+article p {
+  margin-bottom: 1.25rem;
+  text-align: justify;
+}
+
+/* Professional code blocks */
+pre {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+code {
+  background-color: var(--ifm-code-background);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+/* Blockquotes - Academic citation style */
+blockquote {
+  border-left: 4px solid var(--ifm-color-primary);
+  background-color: var(--ifm-color-primary-lightest);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+}
+
+[data-theme='dark'] blockquote {
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+/* Tables - Technical reference style */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5rem 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+table th {
+  background-color: var(--ifm-color-primary);
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+}
+
+table td {
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+/* ============================================
+   Glassmorphism Effects
+   ============================================ */
+
+.glass-nav, .navbar {
+  background: rgba(10, 10, 15, 0.7) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar__title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #00D4FF 0%, #9D4EDD 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* ============================================
+   Gradient Text
+   ============================================ */
+
+.gradient-text {
+  background: linear-gradient(135deg, #00D4FF 0%, #9D4EDD 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ============================================
+   Glow Effects
+   ============================================ */
+
+.glow-box {
+  box-shadow:
+    0 0 20px rgba(0, 212, 255, 0.15),
+    0 0 40px rgba(157, 78, 221, 0.1);
+}
+
+.glow-box:hover {
+  box-shadow:
+    0 0 30px rgba(0, 212, 255, 0.3),
+    0 0 60px rgba(157, 78, 221, 0.2);
+}
+
+/* Sidebar - Book navigation style */
+.menu {
+  font-size: 15px;
+}
+
+.menu__link {
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.menu__link:hover {
+  background-color: var(--ifm-color-primary-lightest);
+  transform: translateX(4px);
+}
+
+.menu__link--active {
+  background: linear-gradient(90deg, var(--ifm-color-primary) 0%, var(--ifm-color-primary-light) 100%);
+  color: white;
+  font-weight: 600;
+}
+
+/* Chapter badges */
+.menu__list-item-collapsible .menu__link {
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--ifm-color-primary);
+}
+
+/* Footer - Cyber Dark styling */
+.footer {
+  background: linear-gradient(135deg, #0a0a0f 0%, #10101a 100%);
+  border-top: 1px solid rgba(0, 212, 255, 0.2);
+  color: white;
+  padding: 3rem 0;
+}
+
+.footer__title {
+  color: var(--cyber-blue);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+}
+
+.footer__link-item {
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.2s ease;
+}
+
+.footer__link-item:hover {
+  color: var(--cyber-blue);
+  text-decoration: none;
+  transform: translateX(4px);
+}
+
+/* ============================================
+   Buttons - Cyber Gradient Style
+   ============================================ */
+
+.button--primary {
+  background: linear-gradient(135deg, #00D4FF 0%, #9D4EDD 100%);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.button--primary:hover {
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+  transform: scale(1.05);
+}
+
+.button--outline {
+  border: 2px solid rgba(0, 212, 255, 0.5);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+.button--outline:hover {
+  border-color: var(--cyber-blue);
+  background: rgba(0, 212, 255, 0.1);
+}
+
+/* Badges and labels */
+.badge {
+  border-radius: 4px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Admonitions - Book callout style */
+.admonition {
+  border-left: 4px solid;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.admonition-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Custom hero section for intro page */
+.hero--primary {
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+  padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero--primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 50%, rgba(220, 38, 38, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hero__title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: white;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  letter-spacing: -0.03em;
+}
+
+.hero__subtitle {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+/* Hero badges enhancement */
+.hero .badge {
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--ifm-color-primary);
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.hero .badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  background: white;
+}
+
+/* ============================================
+   Custom Scrollbar
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #00D4FF, #9D4EDD);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #00D4FF, #C77DFF);
+}
+
+/* ============================================
+   Text Selection
+   ============================================ */
+
+::selection {
+  background: rgba(0, 212, 255, 0.3);
+  color: white;
+}
+
+::-moz-selection {
+  background: rgba(0, 212, 255, 0.3);
+  color: white;
+}
+
+/* ============================================
+   Animations
+   ============================================ */
+
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.floating {
+  animation: floating 6s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(157, 78, 221, 0.6);
+  }
+}
+
+/* Responsive improvements */
+@media (max-width: 996px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .hero__title {
+    font-size: 2.5rem;
+  }
+}
+
+/* Print styles for PDF export */
+@media print {
+  .navbar,
+  .footer,
+  .theme-doc-sidebar-container {
+    display: none !important;
+  }
+
+  article {
+    max-width: 100% !important;
+  }
+}
+
+/* Chatbot Animations */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
+}
+
+/* Custom Scrollbar for Chatbot Messages */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #00D4FF 0%, #9D4EDD 100%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #00A8CC 0%, #7D3EB1 100%);
+}

@@ -1,0 +1,93 @@
+<svg width="240" height="240" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient for tech elements -->
+    <linearGradient id="cyberGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00D4FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9D4EDD;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Glow effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Book Base -->
+  <g id="book">
+    <!-- Book spine -->
+    <path d="M 60 50 L 60 190 L 70 195 L 70 55 Z" fill="#1a1a2e" stroke="url(#cyberGradient)" stroke-width="2"/>
+
+    <!-- Book pages -->
+    <rect x="70" y="55" width="110" height="140" fill="#0f0f1e" stroke="url(#cyberGradient)" stroke-width="2" rx="3"/>
+
+    <!-- Page lines (detail) -->
+    <line x1="80" y1="70" x2="160" y2="70" stroke="rgba(0, 212, 255, 0.3)" stroke-width="1"/>
+    <line x1="80" y1="85" x2="160" y2="85" stroke="rgba(0, 212, 255, 0.3)" stroke-width="1"/>
+    <line x1="80" y1="100" x2="160" y2="100" stroke="rgba(0, 212, 255, 0.3)" stroke-width="1"/>
+
+    <!-- Book cover accent -->
+    <rect x="75" y="60" width="100" height="130" fill="none" stroke="url(#cyberGradient)" stroke-width="1.5" rx="2" opacity="0.4"/>
+  </g>
+
+  <!-- Robot Head Integration -->
+  <g id="robot-head" transform="translate(95, 90)">
+    <!-- Head outline -->
+    <rect x="0" y="0" width="50" height="55" rx="8" fill="none" stroke="url(#cyberGradient)" stroke-width="2.5" filter="url(#glow)"/>
+
+    <!-- Antenna -->
+    <line x1="25" y1="0" x2="25" y2="-8" stroke="url(#cyberGradient)" stroke-width="2"/>
+    <circle cx="25" cy="-10" r="3" fill="url(#cyberGradient)"/>
+
+    <!-- Eyes -->
+    <circle cx="15" cy="20" r="5" fill="#00D4FF" filter="url(#glow)"/>
+    <circle cx="35" cy="20" r="5" fill="#00D4FF" filter="url(#glow)"/>
+
+    <!-- Eye glow effect -->
+    <circle cx="15" cy="20" r="3" fill="#ffffff" opacity="0.8"/>
+    <circle cx="35" cy="20" r="3" fill="#ffffff" opacity="0.8"/>
+
+    <!-- Mouth/processor line -->
+    <path d="M 12 40 Q 25 48 38 40" stroke="url(#cyberGradient)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+    <!-- Circuit details on head -->
+    <line x1="5" y1="10" x2="10" y2="15" stroke="#9D4EDD" stroke-width="1.5" opacity="0.6"/>
+    <line x1="45" y1="10" x2="40" y2="15" stroke="#9D4EDD" stroke-width="1.5" opacity="0.6"/>
+    <circle cx="10" cy="15" r="1.5" fill="#9D4EDD"/>
+    <circle cx="40" cy="15" r="1.5" fill="#9D4EDD"/>
+
+    <!-- Chin accent -->
+    <rect x="18" y="48" width="14" height="3" rx="1" fill="url(#cyberGradient)" opacity="0.7"/>
+  </g>
+
+  <!-- Circuit Board Pattern -->
+  <g id="circuit-pattern" opacity="0.4">
+    <!-- Left circuits -->
+    <line x1="45" y1="90" x2="60" y2="90" stroke="#00D4FF" stroke-width="1"/>
+    <circle cx="45" cy="90" r="2" fill="#00D4FF"/>
+    <line x1="45" y1="120" x2="60" y2="120" stroke="#9D4EDD" stroke-width="1"/>
+    <circle cx="45" cy="120" r="2" fill="#9D4EDD"/>
+
+    <!-- Right circuits -->
+    <line x1="180" y1="100" x2="195" y2="100" stroke="#00D4FF" stroke-width="1"/>
+    <circle cx="195" cy="100" r="2" fill="#00D4FF"/>
+    <line x1="180" y1="140" x2="195" y2="140" stroke="#9D4EDD" stroke-width="1"/>
+    <circle cx="195" cy="140" r="2" fill="#9D4EDD"/>
+  </g>
+
+  <!-- AI Neural Network Nodes (corners) -->
+  <g id="neural-nodes" opacity="0.5">
+    <circle cx="50" cy="60" r="3" fill="#00D4FF"/>
+    <circle cx="190" cy="60" r="3" fill="#9D4EDD"/>
+    <circle cx="50" cy="180" r="3" fill="#9D4EDD"/>
+    <circle cx="190" cy="180" r="3" fill="#00D4FF"/>
+  </g>
+
+  <!-- Title Integration (AI) -->
+  <text x="120" y="220" font-family="'Inter', sans-serif" font-size="14" font-weight="bold" fill="url(#cyberGradient)" text-anchor="middle">
+    AI ROBOTICS
+  </text>
+</svg>
